@@ -1,0 +1,19 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <!-- Variabel yang akan di-bind ke layout -->
+        <variable
+            name="surah"
+            type="com.example.alquranapp.data.model.Surah" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Menggunakan variabel surah -->
+        <TextView
+            android:id="@+id/surahName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{surah.name}" />
+    </RelativeLayout>
+</layout>

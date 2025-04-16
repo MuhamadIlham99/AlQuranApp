@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="ayat"
+            type="com.example.alquranapp.data.model.Ayat" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textArabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{ayat.text}"
+                android:textSize="20sp"
+                android:textAlignment="viewEnd"
+                android:textDirection="rtl" />
+
+            <TextView
+                android:id="@+id/textTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{ayat.translation}"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
